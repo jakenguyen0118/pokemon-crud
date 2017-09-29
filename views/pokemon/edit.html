@@ -12,24 +12,24 @@
 
     <form class="edit-pokemon-form">
       <label>Name:</label>
-      <input class="poke-name-input" value={{ name }} />
+      <input id="poke-name-input" value={{ name }} />
       <br />
 
       <label>Description:</label>
-      <textarea class="poke-description-input">
+      <textarea id="poke-description-input">
         {{ description }}
       </textarea>
       <br />
 
       <label>Image:</label>
-      <input class="poke-image-input" value={{ image }} />
+      <input id="poke-image-input" value={{ image }} />
       <br />
 
       <label>Type:</label>
-      <input class="poke-type-input" value={{ type }} />
+      <input id="poke-type-input" value={{ type }} />
       <br />
 
-      <input type="hidden" class="poke-id-input" value={{ id }} />
+      <input type="hidden" id="poke-id-input" value={{ id }} />
 
       <button type="submit">Submit</button>
     </form>

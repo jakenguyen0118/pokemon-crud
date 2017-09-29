@@ -5,85 +5,51 @@ const Pokemon = require('../models/pokemon');
 /* View Routes */
 
 //show all pokemon view
-router.get('/', (req, res) => {
-  Pokemon
-    .findAll()
-    .then((data) => {
-      res.render('pokemon/index', {pokemon: data});
-    })
-    .catch(err => console.log('ERROR:', err));
-});
+router.get('/',
+    Pokemon.findAll,
+    (req, res) => {
+        res.render('pokemon/index', { pokemon: res.locals.allPokemonData });
+    }
+);
 
 //show new pokemon view
 router.get('/new', (req, res) => {
-  res.render('pokemon/new');
+    res.render('pokemon/new');
 })
 
 //show edit pokemon view
-router.get('/:id/edit',  (req, res) => {
-  const id = req.params.id;
-  Pokemon
-    .findById(id)
-    .then(data => {
-      res.render('pokemon/edit', data);
-    })
-});
+router.get('/:pokemonId/edit',
+    Pokemon.findById,
+    (req, res) => {
+        res.render('pokemon/edit', res.locals.pokemonData);
+    }
+);
 
 //show single pokemon view
-router.get('/:id', (req, res) => {
-  const id = req.params.id;
-  Pokemon
-    .findById(id)
-    .then((data) => {
-      res.render('pokemon/show', data);
-    })
-    .catch(err => console.log('ERROR:', err));
-});
-
-
+router.get('/:pokemonId',
+    Pokemon.findById,
+    (req, res) => {
+        console.log('in pokemon .get with /:pokemonId');
+        res.render('pokemon/show', res.locals.pokemonData);
+    }
+);
 
 /* Api Routes */
 
 // Add a pokemon to your database
-router.post('/', (req, res) => {
-  const name = req.body.name,
-        description = req.body.description,
-        image = req.body.image,
-        type = req.body.type;
+router.post('/'
 
-  Pokemon
-    .create(name, description, image, type)
-    .then(data => res.json(data))
-    .catch(err => console.log('ERROR:', err));
-});
+);
 
 // edit a pokemon in your database
-router.put('/:id', (req, res) => {
-  const id = req.body.id,
-        name = req.body.name,
-        description = req.body.description,
-        image = req.body.image,
-        type = req.body.type;
+router.put('/:id'
 
-  Pokemon
-    .update(id, name, description, image, type)
-    .then(data => res.json(data))
-    .catch(err => console.log('ERROR:', err));
-});
+);
 
 // remove a pokemon
-router.delete('/:id', (req, res) => {
-  const id = req.params.id;
+router.delete('/:pokemonId'
 
-  Pokemon
-    .destroy(id)
-    .then(data => res.json(data))
-    .catch(err => console.log('ERROR:', err));
-});
+);
 
 
 module.exports = router;
-
- 
-
-

@@ -1,10 +1,13 @@
 const express        = require('express');
 const mustacheExpress = require('mustache-express');
 const bodyParser     = require('body-parser');
+const morgan = require('morgan');
 const pgp = require('pg-promise')();
 
 const app  = express();
 const PORT = process.env.PORT || 8080;
+
+app.use(morgan('dev'));
 
 // normal setup for express & mustache (if we want to go there)
 app.engine('html', mustacheExpress());
@@ -19,6 +22,6 @@ app.use(bodyParser.json());
 
 app.use('/pokemon', require('./controllers/pokemon-controller'));
 
-app.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => res.redirect('/pokemon'));
 
 app.listen(PORT, () => console.log('Server is listening on port', PORT));

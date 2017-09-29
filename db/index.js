@@ -5,7 +5,7 @@ const cn = {
     host: 'localhost',
     port: 5432,
     database: 'pokemon_db',
-    user: 'trevor'
+    user: 'timothygardner'
 }
 
 const db = pgp(cn);

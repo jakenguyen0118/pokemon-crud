@@ -1,3 +1,8 @@
+\c postgres;
+DROP DATABASE pokemon_db;
+CREATE DATABASE pokemon_db;
+\c pokemon_db;
+
 DROP TABLE IF EXISTS pokemon;
 
 CREATE TABLE pokemon(
