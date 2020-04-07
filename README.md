@@ -1,6 +1,6 @@
 # Pokemon CRUD
 
-Create a full server that can GET, POST and DELETE Pokemon using a separate `routes`, `controller`, and `models` folders and corresponding files. 
+Create a full server that can GET, POST and DELETE Pokemon using a separate `routes`, `controller`, and `models` folders and their corresponding files. 
 
 ## Setup the server
 
