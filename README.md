@@ -28,7 +28,7 @@ Setup the controller with the following functions:
 
 ## Setup/Configure the models in the models folder
 
-Setup the controller with the following functions:
+Setup the model with the following functions:
 
 - getAllPokemon
 - getPokemonById
