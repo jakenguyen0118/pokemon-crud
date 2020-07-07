@@ -1,5 +1,7 @@
 # Pokemon CRUD
 
+![](https://i.imgur.com/rRKtN1B.jpg)
+
 Create a full server that can GET and DELETE Pokemon using a separate `controller`  and `models` folders and their corresponding files. 
 
 ## Setup the server
