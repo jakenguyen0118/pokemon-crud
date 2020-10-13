@@ -8,7 +8,7 @@ Create a full server that can GET, POST, UPDATE and DELETE Pokemon using a separ
 
 Use your working knowledge of how the fruits and angry birds servers were setup
 
-## Setup/Configure the pokemon routes in the controllers folder
+## Configure the routes
 
 Configure the following routes using your working knowledge of how the fruits and angry birds controllers were setup
 
