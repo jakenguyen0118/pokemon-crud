@@ -6,7 +6,11 @@ Create a full server that can GET, POST, UPDATE and DELETE Pokemon using a separ
 
 ## Setup the server
 
-## Setup/Configure the pokemon routes in the routes folder
+Use your working knowledge of how the fruits and angry birds servers were setup
+
+## Setup/Configure the pokemon routes in the controllers folder
+
+Configure the following routes using your working knowledge of how the fruits and angry birds controllers were setup
 
 The routes should handle the following:
 
@@ -18,7 +22,3 @@ The routes should handle the following:
 | POST   | /pokemon     | 200  | Create Object    |
 | PUT    | /pokemon/:id | 200  | Updated Object   |
 
-
-## Setup/Configure the controller in the controllers folder
-
-## Test each Route using Postman
